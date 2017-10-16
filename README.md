@@ -1,28 +1,30 @@
-# Promo3NgInsta
+Faire une mini app de partage de photo (d'animaux mignons) avec possibilité d'ajouter/supprimer des photos et de liker celles des autres
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
+Fonctionnalités Non connecté.e : 
+- Afficher les users
+- Sélectionner un user pour afficher ses pictures
+- Se connecter
 
-## Development server
+Fonctionnalités Connecté.e :
+- Liker les pictures (une fois)
+- annuler un like
+- ajouter une picture
+- supprimer une de ses picture
+- se déconnecter
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1) Faire un nouveau projet angular avec un json-server, un github et tout
+2) Faire la base de donnée avec des users bidons dans le db.json 
+3) Faire les classes entités : User { id:number, username:string, password:string } 
+Picture { id:number, description:string, link:string, owner:number, likes:number[] }
 
-## Code scaffolding
+Gestion User :
+1) Faire un serviceUser pour récupérer tous les users, récupérer un user spécifique
+2) Faire un serviceAuthentication avec une méthode login, logout et un currentUser en propriété (ce service permettra de savoir si on est présentement connecté ou pas)
+3) Faire un component login qui utilisera le serviceAuth pour afficher soit le formulaire de login soit le bouton de déconnexion
+4) Faire un component feed qui affiche tous les users existant
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Gestion Pictures : 
+1) Faire un servicePicture qui fait le crud sur les pictures
+2) Faire un component picture-list qui affiche toutes les pictures liées à un id user spécifique (le picture.owner) avec leur description, leur like et tout
+3) Faire que quand l'id user du picture-list correspond à l'id du user connecté, alors on puisse supprimer et ajouter des images sur cette même page (en vous basant sur ce qu'on a déjà fait)
