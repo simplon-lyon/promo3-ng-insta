@@ -1,0 +1,11 @@
+{
+  "user": [
+    {"id":1, "username":"test", "password":"test"},
+    {"id":2, "username":"Utilisateur", "password":"pass"},
+    {"id":3, "username":"Autre", "password":"pass"}
+  ],
+  "picture": [
+    {"id":1, "owner":1, "description":"ma description", "link":"https://avatars2.githubusercontent.com/u/19343?s=460&v=4", "likes": [2,3]},
+    {"id":2, "owner":1, "description":"mon avatar", "link":"https://avatars0.githubusercontent.com/u/22493049?s=40&v=4", "likes": [2,3]}
+  ]
+}
