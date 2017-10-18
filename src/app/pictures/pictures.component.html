@@ -1,0 +1,34 @@
+<ul>
+  <li *ngFor="let pic of pictures | async">
+    <img [src]="pic.link" [alt]="pic.description">
+    <p>{{pic.description}}</p>
+    <p>Likes count : {{pic.likes.length}} </p>
+  </li>
+</ul>
+
+<section>
+  <h2>Add Picture</h2>
+  <p>
+    <label>Description</label>
+    <input type="text" [(ngModel)]="newPic.description">
+  </p>
+  <p>
+    <label>Picture</label>
+    <!-- Pour pouvoir lire les input type file avec Angular
+    on doit un peut le cheeser en utilisant cette syntaxe 
+    étrange. 
+    TLDR; les fichiers de l'input sont dans la variable
+    fichier du component.
+
+    En détail : On utilise une template référence avec #file
+    qui va exposer une variable file dans le template qui
+    contient le DOM de l'élément sur lequel on l'a mise 
+    (ici un input type file), ensuite on assigne à l'event
+    change de l'input une assignation de cette template
+    variable vers une variable du component.
+     -->
+    <input type="file" #file (change)="fichier = file.files">
+  </p>
+
+  <button (click)="addPic()">Add</button>
+</section>
