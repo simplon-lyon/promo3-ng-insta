@@ -28,3 +28,7 @@ Gestion Pictures :
 1) Faire un servicePicture qui fait le crud sur les pictures
 2) Faire un component picture-list qui affiche toutes les pictures liées à un id user spécifique (le picture.owner) avec leur description, leur like et tout
 3) Faire que quand l'id user du picture-list correspond à l'id du user connecté, alors on puisse supprimer et ajouter des images sur cette même page (en vous basant sur ce qu'on a déjà fait)
+
+Formulaire d'inscription et validation :
+Faire un model driven form pour l'inscription utilisateur
+Les contraintes de validations sont indiquées en commentaire sur le user dans shared/user.ts
