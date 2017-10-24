@@ -49,4 +49,12 @@ export class AuthService {
     this.user.next(null);
   }
 
+  signup(user:User): Observable<User> {
+    return this.http.post<User>(this.urlAPI, user);
+  }
+
+  getByUsername(username:string):Observable<User> {
+    return this.http.get<User>(this.urlAPI+'?username='+username);
+  }
+
 }
