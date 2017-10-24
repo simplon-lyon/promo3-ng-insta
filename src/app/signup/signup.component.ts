@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../shared/auth.service';
 import { User } from '../shared/user';
+import { uniqueUsername, frenchDate, confirmPassword } from '../shared/validators';
 
 @Component({
   selector: 'app-signup',
@@ -16,10 +17,13 @@ export class SignupComponent implements OnInit {
 
   ngOnInit() {
     this.formulaire = this.fb.group({
-      username:['', [Validators.required]],
+      username:['', [Validators.required], uniqueUsername(this.auth)],
       password:['', [Validators.required, Validators.minLength(3)]],
+      confirm:'',
       mail:['', [Validators.required, Validators.email]],
-      birthdate:[null, []],
+      birthdate:[null, [frenchDate()]],
+    }, {
+      validator: confirmPassword()
     });
   }
 

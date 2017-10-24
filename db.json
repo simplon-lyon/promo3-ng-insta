@@ -14,6 +14,13 @@
       "id": 3,
       "username": "Autre",
       "password": "pass"
+    },
+    {
+      "username": "bloup",
+      "password": "bloup",
+      "mail": "bloup@bloup.bloup",
+      "birthdate": "10/10/2010",
+      "id": 4
     }
   ],
   "picture": [

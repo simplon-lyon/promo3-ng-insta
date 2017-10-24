@@ -1,19 +1,31 @@
 
-<form [formGroup]="formulaire">
+<form [formGroup]="formulaire" (submit)="signup()">
   <p>
     <label>UserName : </label>
     <input type="text" formControlName="username">
+    {{formulaire.get('username').errors | json}}
   </p>
   <p>
     <label>Password : </label>
     <input type="text" formControlName="password">
+    {{formulaire.get('password').errors | json}}
+  </p>
+  <p>
+    <label>Confirm Password : </label>
+    <input type="text" formControlName="confirm">
+    {{formulaire.errors | json}}
   </p>
   <p>
     <label>Mail : </label>
     <input type="text" formControlName="mail">
+    {{formulaire.get('mail').errors | json}}
   </p>
   <p>
     <label>Birthdate : </label>
     <input type="text" formControlName="birthdate">
+    {{formulaire.get('birthdate').errors | json}}
   </p>
+
+
+  <button>Sign In</button>
 </form>
