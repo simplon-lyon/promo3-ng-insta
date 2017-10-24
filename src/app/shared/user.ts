@@ -1,4 +1,5 @@
 export class User {
+    token:string;
     //La date doit être fournie au format dd/mm/YYYY
     birthdate:Date;
     //l'email doit être au format bloup@bloup.bloup

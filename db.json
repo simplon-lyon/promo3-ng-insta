@@ -3,24 +3,28 @@
     {
       "id": 1,
       "username": "test",
-      "password": "test"
+      "password": "test",
+      "token": "ABC|1509494400000"
     },
     {
       "id": 2,
       "username": "Utilisateur",
-      "password": "pass"
+      "password": "pass",
+      "token": "BCD|1509494400000"
     },
     {
       "id": 3,
       "username": "Autre",
-      "password": "pass"
+      "password": "pass",
+      "token": "CDE|1509494400000"
     },
     {
       "username": "bloup",
       "password": "bloup",
       "mail": "bloup@bloup.bloup",
       "birthdate": "10/10/2010",
-      "id": 4
+      "id": 4,
+      "token": "DEF|1509494400000"
     }
   ],
   "picture": [

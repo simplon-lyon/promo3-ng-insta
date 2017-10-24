@@ -14,7 +14,7 @@ export class SignupComponent implements OnInit {
 
   constructor(private fb:FormBuilder,
                private auth:AuthService) { }
-
+               1509494400000
   ngOnInit() {
     this.formulaire = this.fb.group({
       username:['', [Validators.required], uniqueUsername(this.auth)],
