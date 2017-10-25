@@ -21,7 +21,7 @@ export class SignupComponent implements OnInit {
       password:['', [Validators.required, Validators.minLength(3)]],
       confirm:'',
       mail:['', [Validators.required, Validators.email]],
-      birthdate:[null, [frenchDate()]],
+      birthdate:[null, []],
     }, {
       validator: confirmPassword()
     });

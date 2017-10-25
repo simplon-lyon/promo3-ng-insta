@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { PicturesComponent } from './pictures/pictures.component';
 import { PictureService } from './shared/picture.service';
 import { SignupComponent } from './signup/signup.component';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule, MatButtonModule } from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -21,7 +23,13 @@ import { SignupComponent } from './signup/signup.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatButtonModule
   ],
   providers: [AuthService, 
     PictureService],
